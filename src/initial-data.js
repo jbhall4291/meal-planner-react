@@ -10,16 +10,7 @@ export const initialData = {
             title: 'Breakfast',
             foodIds: ['food-1', 'food-2', 'food-3']
         },
-        'column-2': {
-            id: 'column-2',
-            title: 'Lunch',
-            foodIds: ['food-2']
-        },
-        'column-3': {
-            id: 'column-3',
-            title: 'Dinner',
-            foodIds: []
-        }
+
     },
-    columnOrder: ['column-1', 'column-2', 'column-3']
+    columnOrder: ['column-1']
 }

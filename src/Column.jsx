@@ -19,7 +19,7 @@ function Column({ column, foods }) {
                             ref={provided.innerRef}
                             {...provided.droppableProps}
                         >
-                            {foods.map(food => <Food key={food.id} food={food} />)}
+                            {foods.map((food, index) => <Food key={food.id} food={food} index={index} />)}
                             {provided.placeholder}
                         </div>
                     )

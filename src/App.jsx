@@ -17,6 +17,7 @@ function App() {
     <>
       <DragDropContext
         onDragEnd={onDragEnd}
+        onDragStart={() => console.log(`trying to drag...`)}
       >
         {state.columnOrder.map((columnId => {
 
