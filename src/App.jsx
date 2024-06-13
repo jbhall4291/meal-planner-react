@@ -8,9 +8,40 @@ function App() {
 
   const [state, setState] = useState(initialData);
 
-  const onDragEnd = () => {
-    // TODO reorders the column items
-    console.log('element was dropped')
+  const onDragEnd = result => {
+    const { destination, source, draggableId } = result;
+
+    if (!destination) {
+      return;
+    }
+
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    ) {
+      return;
+    }
+
+    const column = state.columns[source.droppableId]
+    const newFoodIds = Array.from(column.foodIds)
+    newFoodIds.splice(source.index, 1)
+    newFoodIds.splice(destination.index, 0, draggableId)
+
+    const newColumn = {
+      ...column,
+      foodIds: newFoodIds
+    }
+
+    const newState = {
+      ...state,
+      columns: {
+        ...state.columns,
+        [newColumn.id]: newColumn,
+      }
+    }
+
+    setState(newState)
+
   };
 
   return (

@@ -8,9 +8,15 @@ export const initialData = {
         'column-1': {
             id: 'column-1',
             title: 'Breakfast',
-            foodIds: ['food-1', 'food-2', 'food-3']
+            foodIds: ['food-1', 'food-2',]
+        },
+
+        'column-2': {
+            id: 'column-2',
+            title: 'Lunch',
+            foodIds: ['food-3']
         },
 
     },
-    columnOrder: ['column-1']
+    columnOrder: ['column-1', 'column-2']
 }
