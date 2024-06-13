@@ -9,7 +9,7 @@ function Column({ column, foods }) {
 
     return (
 
-        <div className=" m-2 border-black border-2 w-60 flex flex-col justify-items-center">
+        <div className=" m-2 border-black border-2 w-100 flex flex-col justify-items-center">
             <h3 className="p-2 bg-green-50 text-center">{column.title}</h3>
 
             <Droppable droppableId={column.id}>
